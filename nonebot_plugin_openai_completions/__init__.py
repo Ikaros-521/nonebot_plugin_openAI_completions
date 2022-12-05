@@ -13,7 +13,6 @@ from nonebot.adapters.onebot.v11 import (
 )
 
 
-# 使用 chatgpt 的 API 进行对话
 api_url = 'https://api.openai.com/v1/completions'
 
 # 使用 openai 的 secret_key 进行身份验证
@@ -21,14 +20,14 @@ secret_key = ''
 
 # 获取env配置
 try:
-    nonebot.logger.debug(nonebot.get_driver().config.chatgpt_secret_key)
-    secret_key = nonebot.get_driver().config.chatgpt_secret_key
+    nonebot.logger.debug(nonebot.get_driver().config.openai_secret_key)
+    secret_key = nonebot.get_driver().config.openai_secret_key
 except:
     secret_key = ""
-    nonebot.logger.warning("chatGPT_secret_key没有配置，功能无法使用喵~。")
+    nonebot.logger.warning("openai_secret_key没有配置，功能无法使用喵~。")
 
 
-catch_str = on_command("gpt", aliases={"GPT", "chatGPT"})
+catch_str = on_command("cplt", aliases={"openai", "ai"})
 
 
 @catch_str.handle()

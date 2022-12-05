@@ -1,14 +1,14 @@
 [tool.poetry]
-name = "nonebot-plugin-chatGPT"
+name = "nonebot-plugin-openAI-completions"
 version = "0.0.1"
 description = "适用于nonebot2 v11的基于trace.moe的动画截图场景追溯插件"
 authors = ["Ikaros <327209194@qq.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "nonebot_plugin_chatGPT"}]
-homepage = "https://github.com/Ikaros-521/nonebot_plugin_chatGPT"
-repository = "https://github.com/Ikaros-521/nonebot_plugin_chatGPT"
-documentation = "https://github.com/Ikaros-521/nonebot_plugin_chatGPT/blob/master/README.md"
+packages = [{include = "nonebot_plugin_openAI_completions"}]
+homepage = "https://github.com/Ikaros-521/nonebot_plugin_openAI_completions"
+repository = "https://github.com/Ikaros-521/nonebot_plugin_openAI_completions"
+documentation = "https://github.com/Ikaros-521/nonebot_plugin_openAI_completions/blob/master/README.md"
 
 # 添加清华镜像
 [[tool.poetry.source]]

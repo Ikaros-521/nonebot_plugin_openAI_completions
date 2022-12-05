@@ -6,24 +6,24 @@
 
 <div align="center">
 
-# nonebot_plugin_chatGPT
+# nonebot_plugin_openAI_completions
   
-_✨ NoneBot openAI chatGPT插件 ✨_
+_✨ NoneBot 调用openAI completions接口实现的对话插件 ✨_
   
-<a href="https://github.com/Ikaros-521/nonebot_plugin_chatGPT/stargazers">
-    <img alt="GitHub stars" src="https://img.shields.io/github/stars/Ikaros-521/nonebot_plugin_chatGPT?color=%09%2300BFFF&style=flat-square">
+<a href="https://github.com/Ikaros-521/nonebot_plugin_openAI_completions/stargazers">
+    <img alt="GitHub stars" src="https://img.shields.io/github/stars/Ikaros-521/nonebot_plugin_openAI_completions?color=%09%2300BFFF&style=flat-square">
 </a>
-<a href="https://github.com/Ikaros-521/nonebot_plugin_chatGPT/issues">
-    <img alt="GitHub issues" src="https://img.shields.io/github/issues/Ikaros-521/nonebot_plugin_chatGPT?color=Emerald%20green&style=flat-square">
+<a href="https://github.com/Ikaros-521/nonebot_plugin_openAI_completions/issues">
+    <img alt="GitHub issues" src="https://img.shields.io/github/issues/Ikaros-521/nonebot_plugin_openAI_completions?color=Emerald%20green&style=flat-square">
 </a>
-<a href="https://github.com/Ikaros-521/nonebot_plugin_chatGPT/network">
-    <img alt="GitHub forks" src="https://img.shields.io/github/forks/Ikaros-521/nonebot_plugin_chatGPT?color=%2300BFFF&style=flat-square">
+<a href="https://github.com/Ikaros-521/nonebot_plugin_openAI_completions/network">
+    <img alt="GitHub forks" src="https://img.shields.io/github/forks/Ikaros-521/nonebot_plugin_openAI_completions?color=%2300BFFF&style=flat-square">
 </a>
 <a href="./LICENSE">
-    <img src="https://img.shields.io/github/license/Ikaros-521/nonebot_plugin_chatGPT.svg" alt="license">
+    <img src="https://img.shields.io/github/license/Ikaros-521/nonebot_plugin_openAI_completions.svg" alt="license">
 </a>
-<a href="https://pypi.python.org/pypi/nonebot_plugin_chatGPT">
-    <img src="https://img.shields.io/pypi/v/nonebot_plugin_chatGPT.svg" alt="pypi">
+<a href="https://pypi.python.org/pypi/nonebot_plugin_openAI_completions">
+    <img src="https://img.shields.io/pypi/v/nonebot_plugin_openAI_completions.svg" alt="pypi">
 </a>
 <a href="https://www.python.org">
     <img src="https://img.shields.io/badge/python-3.8+-blue.svg" alt="python">
@@ -31,7 +31,7 @@ _✨ NoneBot openAI chatGPT插件 ✨_
 
 </div>
 
-适用于nonebot2 v11的openAI chatGPT插件，部分源码由chatGPT编写。    
+适用于nonebot2 v11的调用openAI completions接口实现的对话插件，部分源码由chatGPT编写。    
 调用的相关API源自api.openai.com  
 
 ## 🔧 开发环境
@@ -47,7 +47,7 @@ python：3.8.13
 ### 1. nb-cli安装（推荐）
 在你bot工程的文件夹下，运行cmd（运行路径要对啊），执行nb命令安装插件，插件配置会自动添加至配置文件  
 ```
-nb plugin install nonebot_plugin_chatGPT
+nb plugin install nonebot_plugin_openAI_completions
 ```
 
 ### 2. 本地安装
@@ -55,32 +55,32 @@ nb plugin install nonebot_plugin_chatGPT
 ```
 pip install aiohttp
 ```
-将项目clone到你的机器人插件下的对应插件目录内（一般为机器人文件夹下的`src/plugins`），然后把`nonebot_plugin_chatGPT`文件夹里的内容拷贝至上一级目录即可。  
+将项目clone到你的机器人插件下的对应插件目录内（一般为机器人文件夹下的`src/plugins`），然后把`nonebot_plugin_openAI_completions`文件夹里的内容拷贝至上一级目录即可。  
 clone命令参考（得先装`git`，懂的都懂）：
 ```
-git clone https://github.com/Ikaros-521/nonebot_plugin_chatGPT.git
+git clone https://github.com/Ikaros-521/nonebot_plugin_openAI_completions.git
 ``` 
-也可以直接下载压缩包到插件目录解压，然后同样提取`nonebot_plugin_chatGPT`至上一级目录。  
-目录结构： ```你的bot/src/plugins/nonebot_plugin_chatGPT/__init__.py```  
+也可以直接下载压缩包到插件目录解压，然后同样提取`nonebot_plugin_openAI_completions`至上一级目录。  
+目录结构： ```你的bot/src/plugins/nonebot_plugin_openAI_completions/__init__.py```  
 
 
 ### 3. pip安装
 ```
-pip install nonebot_plugin_chatGPT
+pip install nonebot_plugin_openAI_completions
 ```  
 打开 nonebot2 项目的 ```bot.py``` 文件, 在其中写入  
-```nonebot.load_plugin('nonebot_plugin_chatGPT')```  
-当然，如果是默认nb-cli创建的nonebot2的话，在bot路径```pyproject.toml```的```[tool.nonebot]```的```plugins```中添加```nonebot_plugin_chatGPT```即可  
+```nonebot.load_plugin('nonebot_plugin_openAI_completions')```  
+当然，如果是默认nb-cli创建的nonebot2的话，在bot路径```pyproject.toml```的```[tool.nonebot]```的```plugins```中添加```nonebot_plugin_openAI_completions```即可  
 pyproject.toml配置例如：  
 ``` 
 [tool.nonebot]
 plugin_dirs = ["src/plugins"]
-plugins = ["nonebot_plugin_chatGPT"]
+plugins = ["nonebot_plugin_openAI_completions"]
 ``` 
 
 ### 更新版本
 ```
-nb plugin update nonebot_plugin_chatGPT
+nb plugin update nonebot_plugin_openAI_completions
 ```
 
 ## 🔧 配置
@@ -100,21 +100,21 @@ nb plugin update nonebot_plugin_chatGPT
 ### env配置
 ```
 # 在你的env文件中添加如下配置（我的是.env.prod）  
-chatGPT_secret_key="sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+openai_secret_key="sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
 |       配置项        | 必填 | 默认值  |                      说明                      |
 |:----------------:|:----:|:----:|:----------------------------:|
-| `chatGPT_secret_key` | 是 | `""` | 参考上文secret key获取方式 |
+| `openai_secret_key` | 是 | `""` | 参考上文secret key获取方式 |
 
 
 ## 🎉 功能
-调用chatGPT的API接口获取请求返回直接输出，简单粗暴。  
+调用openAI的API接口获取请求返回直接输出，简单粗暴。  
 
 ## 👉 命令
 
-### /gpt 或 /GPT 或 /chatGPT
-命令结构：```/gpt [你想问的内容]```  
-例如：```/gpt 用python实现hello world``` 或 ```/GPT 你叫什么名字``` 或 ```/chatGPT 今天是什么日子```  
+### /cplt 或 /openai 或 /ai
+命令结构：```/cplt [你想问的内容]```  
+例如：```/cplt 用python实现hello world``` 或 ```/openai 你叫什么名字``` 或 ```/ai 今天是什么日子```  
 bot返回内容：  
 ![](docs/result.png)
 
